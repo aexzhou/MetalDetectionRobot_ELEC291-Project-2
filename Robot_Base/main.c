@@ -1,6 +1,7 @@
 #include "../Common/Include/stm32l051xx.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "../Common/Include/serial.h"
 #include "adc.h"
 #include "UART2.h"
@@ -13,6 +14,10 @@
 
 volatile int pwm_count = 0;
 volatile unsigned char ISR_pwm1=100, ISR_pwm2=75, ISR_pwm3=50, ISR_pwm4=25;
+volatile int lmotor = 0;
+volatile int rmotor = 0;
+char rbuff[20];
+char tbuff[20];
 
 char buffr[20]; //buffer array to store data from sent from the remote control 
 
@@ -104,8 +109,8 @@ void Hardware_Init(void)
 	RCC->IOPENR  |= (BIT1|BIT0);         // peripheral clock enable for ports A and B
 
 	// Configure the pin used for analog input: PB0 and PB1 (pins 14 and 15)
-	// GPIOB->MODER |= (BIT0|BIT1);  // Select analog mode for PB0 (pin 14 of LQFP32 package)
-	// GPIOB->MODER |= (BIT2|BIT3);  // Select analog mode for PB1 (pin 15 of LQFP32 package)
+	GPIOB->MODER |= (BIT0|BIT1);  // Select analog mode for PB0 (pin 14 of LQFP32 package)
+	GPIOB->MODER |= (BIT2|BIT3);  // Select analog mode for PB1 (pin 15 of LQFP32 package)
 
 	GPIOA->MODER = (GPIOA->MODER & ~(BIT1)) | BIT0; // Make pin PA0 output (page 200 of RM0451, two bits used to configure: bit0=1, bit1=0)
 	GPIOA->MODER = (GPIOA->MODER & ~(BIT3)) | BIT2;
@@ -138,12 +143,6 @@ void Hardware_Init(void)
 	GPIOB->OTYPER &= ~BIT6; // Push-pull
     GPIOB->MODER = (GPIOB->MODER & ~(BIT14|BIT15)) | BIT14;  // PB7
 	GPIOB->OTYPER &= ~BIT7; // Push-pull
-	
-	// Set up servo PWM output pins
-    // GPIOA->MODER = (GPIOA->MODER & ~(BIT22|BIT23)) | BIT22; // Make pin PA11 output (page 200 of RM0451, two bits used to configure: bit0=1, bit1=0)
-	// GPIOA->OTYPER &= ~BIT11; // Push-pull
-    // GPIOA->MODER = (GPIOA->MODER & ~(BIT24|BIT25)) | BIT24; // Make pin PA12 output (page 200 of RM0451, two bits used to configure: bit0=1, bit1=0)
-	// GPIOA->OTYPER &= ~BIT12; // Push-pull
 
 	// Set up timer
 	RCC->APB1ENR |= BIT0;  // turn on clock for timer2 (UM: page 177)
@@ -153,15 +152,6 @@ void Hardware_Init(void)
 	TIM2->CR1 |= BIT7;      // ARPE enable    
 	TIM2->DIER |= BIT0;     // enable update event (reload event) interrupt 
 	TIM2->CR1 |= BIT0;      // enable counting   
-
-	// // Set up Timer 3
-	// RCC->APB1ENR1 |= BIT1;  // Turn on clock for Timer 3 (Timer 3 is on APB1ENR1, not APB1ENR)
-	// TIM3->ARR = F_CPU / DEF_F - 1;
-	// NVIC->ISER[0] |= BIT29; // Enable Timer 3 interrupts in the NVIC (TIM3 is on TIM3_IRQn, which corresponds to interrupt 29)
-	// TIM3->CR1 |= BIT4;      // Downcounting    
-	// TIM3->CR1 |= BIT7;      // ARPE enable    
-	// TIM3->DIER |= BIT0;     // Enable update event (reload event) interrupt 
-	// TIM3->CR1 |= BIT0;      // Enable counting  
 
 	// JDY initializations
 	GPIOA->OSPEEDR=0xffffffff; // All pins of port A configured for very high speed! Page 201 of RM0451
@@ -271,26 +261,15 @@ void PrintNumber(long int val, int Base, int digits)
 // A define to easily read PA14 (PA14 must be configured as input first)
 #define PA14 (GPIOA->IDR & BIT14)
 
-
-// MOVEMENT COMMANDS
-// pwm_1, pwm_2 for left
-// pwm_3, pwm_4 for right
-
-/* input is two 1 byte controls, one for each motor
- [	7		6		5		4		3		2		1		0		] 
----/RESERVED/--- fwd/bwd   -----------------MAGNITUDE----------------
-				   0/1						  0->20
-*/
-
 // decoder, takes 1 byte input 
 void r_cont_decode(int n){
 	if (n > 0){
 		// move forward command
 		ISR_pwm1 = 0;
-		ISR_pwm2 = (float)n * 4.75;
+		ISR_pwm2 = n * 5;
 	} else {
 		// move backwards
-		ISR_pwm1 = (float)n * 4.75;
+		ISR_pwm1 = n * 5;
 		ISR_pwm2 = 0;
 	}
 }
@@ -300,68 +279,27 @@ void l_cont_decode(int n){
 	if (n > 0){
 		// move forward command
 		ISR_pwm3 = 0;
-		ISR_pwm4 = n * 5;
+		ISR_pwm4 = (float)n * 4.75;
 	} else {
 		// move backwards
-		ISR_pwm3 = n * 5;
+		ISR_pwm3 = (float)n * 4.75;
 		ISR_pwm4 = 0;
 	}
 }
 
-void printCharAsBinary(char c) {
-	int i = 0;
-	char out;
-
-    for (i = 7; i >= 0; i--) {
-        out = (c >> i) & 1; // Shift right i bits, and mask all but the least significant bit
-        PrintNumber(out, 10, 1);
-    }
-    //eputs("\r\n"); // Move to a new line after printing the binary representation
-}
-
-int char2int(char encoded) {
-    int sign = (encoded & 0x20) ? -1 : 1; // Check bit 5 for sign. Negative if set.
-    int magnitude = encoded & 0x1F; // Extract the magnitude from bits 0-4.
-    return sign * magnitude;
-}
-
-// Function to calculate the rolling average of past 100 values
-float rolling_average(float new_value, float *buffer, int *index, int size) {
-    static float sum = 0;
-
-    // Subtract the oldest value from the sum
-    sum -= buffer[*index];
-    // Add the new value to the sum
-    sum += new_value;
-    // Store the new value in the buffer
-    buffer[*index] = new_value;
-    // Increment index (with wraparound)
-    *index = (*index + 1) % size;
-
-    // Return the rolling average
-    return sum / size;
-}
-
 int main(void)
 {
-    int j, v;
+    int j, vl, vr;
 	long int count;
-	unsigned char LED_toggle=0; // Used to test the outputs
-	float T, f, f_avg, f_new;
-	int f_counter;
-	int freq_index = 0;
-	float freq_buffer[avg_count] = {0};
-	int lmotor = 0;
-	int rmotor = 0;
-	int r_prev = 0;
-	int l_prev = 0;
+	float T, f;
+	int light_check = 1;
 
 	Hardware_Init();
 	initUART2(9600);
 	waitms(500);
 
 	//Set-up of unique device ID
-	SendATCommand("AT+DVID1359\r\n");  
+	SendATCommand("AT+DVIDA0C4\r\n");  
 
 	// To check configuration
 	SendATCommand("AT+VER\r\n");
@@ -372,151 +310,78 @@ int main(void)
 	SendATCommand("AT+POWE\r\n");
 	SendATCommand("AT+CLSS\r\n");
 	
-	
 	waitms(500); // Give putty a chance to start before we send characters with printf()
-	eputs("\x1b[2J\x1b[1;1H"); // Clear screen using ANSI escape sequence.
-	eputs("\r\nSTM32L051 multi I/O example.\r\n");
-	eputs("Measures the voltage from ADC channels 8 and 9 (pins 14 and 15 of LQFP32 package)\r\n");
-	eputs("Measures period on PA8 (pin 18 of LQFP32 package)\r\n");
-	eputs("Toggles PB3, PB4, PB5, PB6, PB7 (pins 26, 27, 28, 29, 30 of LQFP32 package)\r\n");
-	eputs("Generates servo PWMs on PA0, PA1, PA2, PA3 (pins 6, 7, 8, 9 of LQFP32 package)\r\n");
-	eputs("Reads the push-button on pin PA14 (pin 24 of LQFP32 package)\r\n\r\n");
-
-    LED_toggle=0;
-	PB3_0;
-	PB4_0;
-	PB5_0;
-	PB6_0;
-	PB7_0;
-					
+			
 	while (1)
-	{
-		if(ReceivedBytes2()>0) //something has arrived
-		{
-			egets2(buffr, sizeof(buffr)-1);
+	{	
+		if(ReceivedBytes2()>0){
+            egets2(rbuff, sizeof(rbuff)-1);
+			sscanf(rbuff,"%d%d%d",&lmotor,&rmotor,&light_check);
+//			eputs("\r\n");
+//			PrintNumber((long int)f, 10, 6);
+//			eputs("\r\n");
+//			PrintNumber(lmotor, 10, 2);
+//			eputs("\r\n");
+//			PrintNumber(rmotor, 10, 2);
+			count=GetPeriod(60);
+			__enable_irq();
+			if(count>0){
+			// send frequency to controller
+				f=(F_CPU*60)/count;
+			sprintf(rbuff, "     %d", (int)f);
+			eputs2(rbuff);				
+			}
+		}
 
-			lmotor = char2int(buffr[0]);
-			rmotor = char2int(buffr[1]);
+		if (light_check == 1){
+			// read from ADC at pin 14 (PB0) - left
+			j=readADC(ADC_CHSELR_CHSEL8);
+			vl=(j*33000)/0xfff;
+			eputs("ADC[8]=0x");
+			PrintNumber(j, 16, 4);
+			eputs(", ");
+			PrintNumber(vl/10000, 10, 1);
+			eputc('.');
+			PrintNumber(vl%10000, 10, 4);
+			eputs("V ");
 
-			/*
-			egets2(buffr, sizeof(buffr)-1);
-			printCharAsBinary(buffr[0]);
-			printCharAsBinary(buffr[1]);
-
-			lmotor = char2int(buffr[0]);
-			rmotor = char2int(buffr[1]);
-			eputs("\r\n		l: ");
-			PrintNumber(lmotor, 10, 2);
-			eputs("		r: ");
-			PrintNumber(rmotor, 10, 2);
+			// read from ADC at pin 15 (PB1) - right
+			j=readADC(ADC_CHSELR_CHSEL9);
+			vr=(j*33000)/0xfff;
+			eputs("ADC[9]=0x");
+			PrintNumber(j, 16, 4);
+			eputs(", ");
+			PrintNumber(vr/10000, 10, 1);
+			eputc('.');
+			PrintNumber(vr%10000, 10, 4);
+			eputs("V ");
 			eputs("\r\n");
-			*/
+
+			// v stores voltage * 10000
+			if ((vl > 15000) && (vr > 15000)){
+				// range of +- 0.1v
+				if (vl > vr+1000){
+					// turn left to equalize light
+					l_cont_decode(10);
+					r_cont_decode(0);
+				} else if (vl < vr-1000){
+					// turn right to equalize light
+					l_cont_decode(0);
+					r_cont_decode(10);
+				} else {
+					// robot should be facing towards light
+					l_cont_decode(10);
+					r_cont_decode(10);
+				}
+			} else {
+				l_cont_decode(0);
+				r_cont_decode(0);
+			}
+
+		} else {
+			l_cont_decode(lmotor);
+			r_cont_decode(rmotor);	
 		}
-
-
-/*	
-		j=readADC(ADC_CHSELR_CHSEL8);
-		v=(j*33000)/0xfff;
-		eputs("ADC[8]=0x");
-		PrintNumber(j, 16, 4);
-		eputs(", ");
-		PrintNumber(v/10000, 10, 1);
-		eputc('.');
-		PrintNumber(v%10000, 10, 4);
-		eputs("V ");;
-
-		j=readADC(ADC_CHSELR_CHSEL9);
-		v=(j*33000)/0xfff;
-		eputs("ADC[9]=0x");
-		PrintNumber(j, 16, 4);
-		eputs(", ");
-		PrintNumber(v/10000, 10, 1);
-		eputc('.');
-		PrintNumber(v%10000, 10, 4);
-		eputs("V ");
-		
-		eputs("PA14=");
-		if(PA14)
-		{
-			eputs("1 ");
-		}
-		else
-		{
-			eputs("0 ");
-		}
-*/
-		// Not very good for high frequencies because of all the interrupts in the background
-		// but decent for low frequencies around 10kHz.
-		count=GetPeriod(60);
-		if(count>0)
-		{
-			f=(F_CPU*60)/count;
-			// eputs("f=");
-			// PrintNumber(f, 10, 7);
-			// eputs("Hz, count=");
-			// PrintNumber(count, 10, 6);
-			// eputs("          \r\n\r\n");
-		}
-		else
-		{
-			eputs("NO SIGNAL                     \r");
-		}
-
-		// Now turn on one of outputs per cycle to check
-		switch (LED_toggle++)
-		{
-			case 0:
-				PB3_1;
-				break;
-			case 1:
-				PB4_1;
-				break;
-			case 2:
-				PB5_1;
-				break;
-			case 3:
-				PB6_1;
-				break;
-			case 4:
-				PB7_1;
-				break;
-			default:
-			    LED_toggle=0;
-				PB3_0;
-				PB4_0;
-				PB5_0;
-				PB6_0;
-				PB7_0;
-				break;
-		}
-		
-		// TAKE AVERAGE OF FREQUENCY
-		// f_avg = rolling_average(f, freq_buffer, &freq_index, avg_count);
-		
-		// eputs("\r\n		f count = ");
-		// PrintNumber(freq_index, 10, 5);
-		// eputs("\r\n		f avg = ");
-		// PrintNumber(f_avg, 10, 7);
-		// eputs("\r\n");
-
-		// // check for changes in frequency (note frequency only goes up with metal detection)
-		// if (f_avg > base_freq+10){
-		// 	eputs("Metal Detected\r\n");
-		// }
-
-		if ((r_prev != rmotor) && (rmotor == 10)){
-			rmotor = 0;
-		}
-
-		if ((l_prev != lmotor) && (lmotor == 10)){
-			lmotor = 0;
-		}
-
-		l_cont_decode(rmotor);
-		r_cont_decode(lmotor);
-
-		r_prev = rmotor;
-		l_prev = lmotor;
 
 		//waitms(25);	
 	}
