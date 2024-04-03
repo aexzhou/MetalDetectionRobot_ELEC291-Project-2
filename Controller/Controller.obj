@@ -1,0 +1,2611 @@
+<MODULE>
+Controller
+</MODULE>
+
+<OPTC51>
+--model-small
+</OPTC51>
+
+<SEGMENTS>
+R_GSINIT,code,0000,NO
+R_BSEG,bit,0001,NO
+R_XSEG,xdata,0014,NO
+BIT_BANK,data,0000,OV
+R_CONST,code,00F2,NO
+rbank0,data,0000,OV
+R_PSEG,xdata,0000,NO
+R_DINIT,code,0005,NO
+R_DSEG,data,0043,NO
+R_OSEG,data,0004,OV
+R_IXSEG,xdata,0000,NO
+R_ISEG,idata,0034,NO
+R_HOME,code,0000,NO
+R_XINIT,code,0000,NO
+R_CSEG,code,125C,NO
+</SEGMENTS>
+
+<LOCALS>
+_main_vy_left_1_171,R_DSEG,0037,0004
+L002004?,R_CSEG,0029,0000
+L002001?,R_CSEG,001E,0000
+_Weigh_Dual_Inputs_sloc1_1_0,R_DSEG,0017,0003
+L033013?,R_CSEG,0F95,0000
+L033012?,R_CSEG,0F61,0000
+L033011?,R_CSEG,0F5E,0000
+L015004?,R_CSEG,02E3,0000
+L015002?,R_CSEG,0301,0000
+_Weigh_Dual_Inputs_sloc2_1_0,R_DSEG,001A,0004
+_getsn_buff_1_162,R_DSEG,0024,0003
+L034011?,R_CSEG,1073,0000
+L022017?,R_CSEG,06B9,0000
+L031007?,R_CSEG,0E87,0000
+L031006?,R_CSEG,0E80,0000
+L022014?,R_CSEG,0728,0000
+L031003?,R_CSEG,0E4C,0000
+L022011?,R_CSEG,077A,0000
+_getsn_sloc0_1_0,R_DSEG,0027,0002
+L034023?,R_CSEG,1250,0000
+L022029?,R_CSEG,0A7F,0000
+L034021?,R_CSEG,1239,0000
+L022026?,R_CSEG,092A,0000
+L022023?,R_CSEG,097A,0000
+L004005?,R_CSEG,00CC,0000
+L022020?,R_CSEG,0844,0000
+__str_10,R_CONST,00A1,0000
+__str_11,R_CONST,00AB,0000
+__str_12,R_CONST,00B5,0000
+__str_13,R_CONST,00BE,0000
+__str_14,R_CONST,00E5,0000
+L004003?,R_CSEG,00C4,0000
+L004002?,R_CSEG,00BA,0000
+L004001?,R_CSEG,00B0,0000
+L022038?,R_CSEG,08B3,0000
+L022035?,R_CSEG,09C9,0000
+L032008?,R_CSEG,0F2C,0000
+_Generate_Motor_Command_sloc0_1_0,R_DSEG,0005,0003
+L022032?,R_CSEG,0A2D,0000
+L032005?,R_CSEG,0EC4,0000
+L032002?,R_CSEG,0F0D,0000
+L032001?,R_CSEG,0EF0,0000
+L008018?,R_CSEG,019D,0000
+L017009?,R_CSEG,036A,0000
+L020005?,R_CSEG,04BD,0000
+L017007?,R_CSEG,0323,0000
+L020002?,R_CSEG,055A,0000
+L017003?,R_CSEG,032C,0000
+L017002?,R_CSEG,034D,0000
+L022042?,R_CSEG,07C2,0000
+L005001?,R_CSEG,00FA,0000
+L033004?,R_CSEG,0F97,0000
+L033001?,R_CSEG,0F4F,0000
+L012012?,R_CSEG,0276,0000
+_main_vx_right_1_171,R_DSEG,002B,0004
+L021002?,R_CSEG,0574,0000
+L034007?,R_CSEG,1248,0000
+_Weigh_Dual_Inputs_sloc3_1_0,R_DSEG,001E,0003
+L034006?,R_CSEG,1219,0000
+L025012?,R_CSEG,0CDF,0000
+L022008?,R_CSEG,062D,0000
+L022005?,R_CSEG,0678,0000
+L022002?,R_CSEG,05B1,0000
+L010008?,R_CSEG,022F,0000
+L019002?,R_CSEG,03EE,0000
+L025025?,R_CSEG,0D5E,0000
+L007007?,R_CSEG,0185,0000
+L010001?,R_CSEG,022A,0000
+L007004?,R_CSEG,0175,0000
+L007001?,R_CSEG,017A,0000
+L014012?,R_CSEG,02C4,0000
+_Weigh_Dual_Inputs_mout_1_144,R_DSEG,0012,0003
+__str_0,R_CONST,0000,0000
+__str_1,R_CONST,001E,0000
+__str_2,R_CONST,002A,0000
+__str_3,R_CONST,0039,0000
+__str_4,R_CONST,003C,0000
+__str_5,R_CONST,003E,0000
+__str_6,R_CONST,0076,0000
+__str_7,R_CONST,0080,0000
+__str_8,R_CONST,008A,0000
+__str_9,R_CONST,0098,0000
+L008009?,R_CSEG,01C3,0000
+L011004?,R_CSEG,025F,0000
+L008007?,R_CSEG,01BC,0000
+_main_sw_left_1_171,R_DSEG,003B,0004
+L008005?,R_CSEG,0191,0000
+L011001?,R_CSEG,023B,0000
+L008001?,R_CSEG,019A,0000
+_main_sw_right_1_171,R_DSEG,002F,0004
+_main_vx_left_1_171,R_DSEG,0033,0004
+L012005?,R_CSEG,028E,0000
+L012002?,R_CSEG,0266,0000
+L031014?,R_CSEG,0E31,0000
+L031013?,R_CSEG,0E2F,0000
+L031011?,R_CSEG,0EA7,0000
+L022065?,R_CSEG,05D0,0000
+L022064?,R_CSEG,05BC,0000
+L025005?,R_CSEG,0D5E,0000
+L025002?,R_CSEG,0D45,0000
+L025001?,R_CSEG,0D1F,0000
+L013008?,R_CSEG,0297,0000
+L004015?,R_CSEG,00AB,0000
+L004014?,R_CSEG,00A6,0000
+L004013?,R_CSEG,009A,0000
+L022075?,R_CSEG,08C7,0000
+L004011?,R_CSEG,0098,0000
+L022073?,R_CSEG,07D8,0000
+L013001?,R_CSEG,0292,0000
+L022072?,R_CSEG,07C8,0000
+L032018?,R_CSEG,0F26,0000
+L032015?,R_CSEG,0EED,0000
+_Weigh_Dual_Inputs_sloc0_1_0,R_DSEG,0015,0002
+L017019?,R_CSEG,032F,0000
+L017011?,R_CSEG,0371,0000
+_main_vx1_1_171,R_DSEG,003F,0002
+L014005?,R_CSEG,02D1,0000
+_main_vy1_1_171,R_DSEG,0041,0002
+L014003?,R_CSEG,02A8,0000
+</LOCALS>
+
+<PUBLICS>
+_LCDprint,R_CSEG,0E20,0000
+_Generate_Motor_Command,R_CSEG,0578,0000
+_WriteData,R_CSEG,0DD0,0000
+_InitPinADC,R_CSEG,008D,0000
+_SendATCommand,R_CSEG,0372,0000
+_waitms_or_RI1,R_CSEG,031B,0000
+_Volts_at_Pin,R_CSEG,0104,0000
+_main,R_CSEG,0FAD,0000
+_buff,R_XSEG,0000,0014
+_rbuff,R_ISEG,0014,0014
+_LCD_pulse,R_CSEG,0D8F,0000
+_WriteCommand,R_CSEG,0DDF,0000
+_sendstr1,R_CSEG,0235,0000
+_sendstr2,R_CSEG,0260,0000
+_getchar1,R_CSEG,028F,0000
+_mcmd,R_ISEG,0030,0004
+_LCD_4BIT,R_CSEG,0DEE,0000
+_putchar1,R_CSEG,0225,0000
+_Wait_For_Calibration,R_CSEG,0CDF,0000
+__c51_external_startup,R_CSEG,0000,0000
+_UART1_Init,R_CSEG,01C4,0000
+_InitPinADC_PARM_2,R_DSEG,0000,0001
+_LCD_byte,R_CSEG,0D9A,0000
+_Package_Signed_int,R_CSEG,03E2,0000
+_tbuff,R_ISEG,0000,0014
+_getsn,R_CSEG,0EA8,0000
+_t,R_DSEG,0029,0002
+_LCDprint_PARM_2,R_DSEG,0021,0001
+_LCDprint_PARM_3,R_BSEG,0000,0001
+_RXU1,R_CSEG,0312,0000
+_Generate_Motor_Command_PARM_2,R_DSEG,0001,0002
+_Generate_Motor_Command_PARM_3,R_DSEG,0003,0002
+_Weigh_Dual_Inputs_PARM_2,R_DSEG,0008,0003
+_Weigh_Dual_Inputs_PARM_3,R_DSEG,000B,0003
+_Weigh_Dual_Inputs_PARM_4,R_DSEG,000E,0004
+_InitADC,R_CSEG,0073,0000
+_getstr1,R_CSEG,02DD,0000
+_Check_Joystick_Button,R_CSEG,055E,0000
+_Timer3us,R_CSEG,015F,0000
+_Generate_Pivot_Command_PARM_2,R_OSEG,0000,0002
+_Generate_Pivot_Command_PARM_3,R_OSEG,0002,0002
+_Generate_Pivot_Command,R_CSEG,0AC5,0000
+_Weigh_Dual_Inputs,R_CSEG,0AEE,0000
+_getchar1_with_timeout,R_CSEG,02A1,0000
+_printCharAsBinary,R_CSEG,0F49,0000
+_mcmd1,R_ISEG,0028,0004
+_mcmd2,R_ISEG,002C,0004
+_ADC_at_Pin,R_CSEG,00F3,0000
+_getsn_PARM_2,R_DSEG,0022,0002
+_waitms,R_CSEG,0189,0000
+_Voltage_to_Coordinate,R_CSEG,0414,0000
+</PUBLICS>
+
+<EXTERNALS>
+__gptrget,any,0000,0000
+__divulong,any,0000,0000
+___uint2fs,any,0000,0000
+___fsgt,any,0000,0000
+___fs2sint,any,0000,0000
+___fslt,any,0000,0000
+___fsmul,any,0000,0000
+_abs,any,0000,0000
+__mulint,any,0000,0000
+___fsadd,any,0000,0000
+_printf,any,0000,0000
+__mulint_PARM_2,any,0000,0000
+__divulong_PARM_2,any,0000,0000
+_getchar,any,0000,0000
+__gptrput,any,0000,0000
+__divsint,any,0000,0000
+_sprintf,any,0000,0000
+___fssub,any,0000,0000
+_crt0,any,0000,0000
+___sint2fs,any,0000,0000
+___fsdiv,any,0000,0000
+__divsint_PARM_2,any,0000,0000
+</EXTERNALS>
+
+<CODE AT 0000>
+</CODE>
+
+<CODE R_HOME>
+</CODE>
+
+<CODE R_GSINIT>
+</CODE>
+
+<CODE R_CSEG>
+</CODE>
+
+<CODE AT 0000>
+02 addr16(_crt0;)  
+</CODE>
+
+<CODE R_HOME>
+</CODE>
+
+<CODE R_GSINIT>
+</CODE>
+
+<CODE R_GSINIT>
+</CODE>
+
+<CODE R_DINIT>
+E4
+F5 data8(_t;)
+F5 data8(_t;0x0001;+;)
+</CODE>
+
+<CODE R_CSEG>
+75 A7 00
+75 97 DE
+75 97 AD
+75 FF 80
+75 EF 06
+75 A7 10
+75 C1 20
+75 A7 00
+75 A9 00
+75 A9 00
+E5 A9
+30 E7 rel3(L002001?;)
+75 A9 03
+75 A9 03
+E5 A9
+30 E7 rel3(L002004?;)
+43 A4 11
+43 9C 08
+75 E1 01
+75 E2 00
+75 E3 41
+75 98 10
+75 8D E6
+85 8D 8B
+53 89 0F
+43 89 20
+D2 8E
+D2 99
+75 A7 10
+75 98 00
+43 A6 01
+75 A2 60
+75 A3 73
+75 A4 FF
+75 A5 FF
+43 F3 04
+D2 9A
+75 A7 00
+D2 AF
+75 82 00
+22
+75 A7 00
+C2 EF
+75 B2 80
+75 BC 20
+75 B9 1E
+75 E8 00
+75 DF 3F
+75 B3 00
+D2 EF
+22
+AA 82
+85 data8(_InitPinADC_PARM_2;) F0
+05 F0
+74 01
+80 rel2(L004013?;)
+25 E0
+D5 F0 rel3(L004011?;)
+FB
+75 A7 20
+BA 00 rel3(L004014?;)
+80 rel2(L004001?;)
+BA 01 rel3(L004015?;)
+80 rel2(L004002?;)
+BA 02 rel3(L004005?;)
+80 rel2(L004003?;)
+EB
+F4
+FC
+52 F1
+EB
+42 D4
+80 rel2(L004005?;)
+EB
+F4
+FC
+52 F2
+EB
+42 D5
+80 rel2(L004005?;)
+EB
+F4
+FC
+52 F3
+EB
+42 CC
+75 A7 00
+AB data8(_InitPinADC_PARM_2;)
+7C 00
+7D 00
+C0 03
+C0 04
+C0 02
+C0 05
+74 data8(__str_0;)
+C0 E0
+74 data8(__str_0;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+E5 81
+24 F9
+F5 81
+22
+85 82 BB
+C2 ED
+D2 EC
+30 ED rel3(L005001?;)
+85 BD 82
+85 BE 83
+22
+12 addr16(_ADC_at_Pin;)  
+12 addr16(___uint2fs;)  
+AA 82
+AB 83
+AC F0
+FD
+C0 02
+C0 03
+C0 04
+C0 05
+90 6C 8B
+75 F0 53
+74 40
+12 addr16(___fsmul;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+E4
+C0 E0
+74 FC
+C0 E0
+74 7F
+C0 E0
+74 46
+C0 E0
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(___fsdiv;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+8A 82
+8B 83
+8C F0
+ED
+22
+AA 82
+43 8E 40
+75 92 B8
+75 93 FF
+85 92 94
+85 93 95
+75 91 04
+7B 00
+C3
+EB
+9A
+50 rel2(L007007?;)
+E5 91
+30 E7 rel3(L007001?;)
+53 91 7F
+0B
+80 rel2(L007004?;)
+75 91 00
+22
+AA 82
+AB 83
+7C 00
+7D 00
+C3
+EC
+9A
+ED
+9B
+50 rel2(L008009?;)
+7E 00
+BE 04 rel3(L008018?;)
+50 rel2(L008007?;)
+75 82 FA
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+12 addr16(_Timer3us;)  
+D0 06
+D0 05
+D0 04
+D0 03
+D0 02
+0E
+80 rel2(L008001?;)
+0C
+BC 00 rel3(L008005?;)
+0D
+80 rel2(L008005?;)
+22
+AA 82
+AB 83
+AC F0
+FD
+75 A7 20
+75 93 0C
+75 C8 10
+75 94 00
+8A data8(__divulong_PARM_2;)
+8B data8(__divulong_PARM_2;0x0001;+;)
+8C data8(__divulong_PARM_2;0x0002;+;)
+8D data8(__divulong_PARM_2;0x0003;+;)
+90 A2 00
+75 F0 4A
+74 04
+12 addr16(__divulong;)  
+AA 82
+AB 83
+AC F0
+FD
+75 data8(__divulong_PARM_2;) 18
+E4
+F5 data8(__divulong_PARM_2;0x0001;+;)
+F5 data8(__divulong_PARM_2;0x0002;+;)
+F5 data8(__divulong_PARM_2;0x0003;+;)
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__divulong;)  
+AA 82
+AB 83
+AC F0
+FD
+E4
+C3
+9A
+FA
+E4
+9B
+FB
+74 01
+9C
+E4
+9D
+8A 95
+8B 96
+D2 C9
+43 94 40
+75 A7 00
+22
+AA 82
+75 A7 20
+10 C9 rel3(L010008?;)
+80 rel2(L010001?;)
+8A 92
+75 A7 00
+22
+AA 82
+AB 83
+AC F0
+8A 82
+8B 83
+8C F0
+12 addr16(__gptrget;)  
+FD
+60 rel2(L011004?;)
+8D 82
+C0 02
+C0 03
+C0 04
+12 addr16(_putchar1;)  
+D0 04
+D0 03
+D0 02
+0A
+BA 00 rel3(L011001?;)
+0B
+80 rel2(L011001?;)
+22
+AA 82
+AB 83
+AC F0
+8A 82
+8B 83
+8C F0
+12 addr16(__gptrget;)  
+FD
+60 rel2(L012005?;)
+BD 0A rel3(L012012?;)
+22
+8D 82
+C0 02
+C0 03
+C0 04
+12 addr16(_putchar1;)  
+D0 04
+D0 03
+D0 02
+0A
+BA 00 rel3(L012002?;)
+0B
+80 rel2(L012002?;)
+22
+75 A7 20
+10 C8 rel3(L013008?;)
+80 rel2(L013001?;)
+53 C8 3F
+85 92 82
+75 A7 00
+22
+75 A7 20
+7A 00
+7B 00
+20 C8 rel3(L014005?;)
+75 A7 00
+75 82 14
+C0 02
+C0 03
+12 addr16(_Timer3us;)  
+D0 03
+D0 02
+75 A7 20
+0A
+BA 00 rel3(L014012?;)
+0B
+BA A8 rel3(L014003?;)
+BB 61 rel3(L014003?;)
+75 A7 00
+75 82 0A
+22
+C2 C8
+53 C8 3F
+85 92 82
+75 A7 00
+22
+AA 82
+AB 83
+AC F0
+C0 02
+C0 03
+C0 04
+12 addr16(_getchar1_with_timeout;)  
+AD 82
+D0 04
+D0 03
+D0 02
+BD 0A rel3(L015002?;)
+8A 82
+8B 83
+8C F0
+E4
+02 addr16(__gptrput;)  
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+AA 82
+AB 83
+80 rel2(L015004?;)
+75 A7 20
+A2 C8
+75 A7 00
+22
+AA 82
+AB 83
+7C 00
+7D 00
+C3
+EC
+9A
+ED
+9B
+50 rel2(L017011?;)
+7E 00
+BE 04 rel3(L017019?;)
+50 rel2(L017009?;)
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+12 addr16(_RXU1;)  
+E4
+33
+D0 06
+D0 05
+D0 04
+D0 03
+D0 02
+60 rel2(L017002?;)
+22
+75 82 FA
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+12 addr16(_Timer3us;)  
+D0 06
+D0 05
+D0 04
+D0 03
+D0 02
+0E
+80 rel2(L017003?;)
+0C
+BC 00 rel3(L017007?;)
+0D
+80 rel2(L017007?;)
+22
+AA 82
+AB 83
+AC F0
+C0 02
+C0 03
+C0 04
+C0 02
+C0 03
+C0 04
+74 data8(__str_1;)
+C0 E0
+74 data8(__str_1;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+E5 81
+24 FA
+F5 81
+C2 B3
+90 00 05
+12 addr16(_waitms;)  
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+12 addr16(_sendstr1;)  
+90 data16(_buff;)  
+75 F0 00
+12 addr16(_getstr1;)  
+90 00 0A
+12 addr16(_waitms;)  
+D2 B3
+74 data8(_buff;)
+C0 E0
+74 data8(_buff;0x0008;>>;)
+C0 E0
+E4
+C0 E0
+74 data8(__str_2;)
+C0 E0
+74 data8(__str_2;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+E5 81
+24 FA
+F5 81
+22
+AA 82
+AB 83
+7C 80
+EB
+30 E7 rel3(L019002?;)
+7C A0
+8A 82
+8B 83
+C0 04
+12 addr16(_abs;)  
+E5 82
+85 83 F0
+D0 04
+54 1F
+FA
+7B 00
+EC
+FD
+33
+95 E0
+FE
+ED
+42 02
+EE
+42 03
+8A 04
+8C 82
+22
+AA 82
+AB 83
+AC F0
+FD
+C0 02
+C0 03
+C0 04
+C0 05
+C0 02
+C0 03
+C0 04
+C0 05
+90 33 33
+75 F0 D3
+74 3F
+12 addr16(___fslt;)  
+AE 82
+E5 81
+24 FC
+F5 81
+D0 05
+D0 04
+D0 03
+D0 02
+EE
+60 rel2(L020005?;)
+74 33
+C0 E0
+C0 E0
+74 D3
+C0 E0
+74 3F
+C0 E0
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(___fssub;)  
+AE 82
+AF 83
+A8 F0
+F9
+E5 81
+24 FC
+F5 81
+74 33
+C0 E0
+C0 E0
+74 D3
+C0 E0
+74 3F
+C0 E0
+8E 82
+8F 83
+88 F0
+E9
+12 addr16(___fsdiv;)  
+AE 82
+AF 83
+A8 F0
+F9
+E5 81
+24 FC
+F5 81
+C0 06
+C0 07
+C0 00
+C0 01
+90 00 00
+75 F0 A0
+74 41
+12 addr16(___fsmul;)  
+AE 82
+AF 83
+A8 F0
+F9
+E5 81
+24 FC
+F5 81
+8E 82
+8F 83
+88 F0
+E9
+02 addr16(___fs2sint;)  
+C0 02
+C0 03
+C0 04
+C0 05
+C0 02
+C0 03
+C0 04
+C0 05
+90 33 33
+75 F0 D3
+74 3F
+12 addr16(___fsgt;)  
+AE 82
+E5 81
+24 FC
+F5 81
+D0 05
+D0 04
+D0 03
+D0 02
+EE
+60 rel2(L020002?;)
+74 33
+C0 E0
+C0 E0
+74 D3
+C0 E0
+74 3F
+C0 E0
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(___fsdiv;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+C0 02
+C0 03
+C0 04
+C0 05
+90 00 00
+75 F0 80
+74 3F
+12 addr16(___fssub;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+C0 02
+C0 03
+C0 04
+C0 05
+90 00 00
+75 F0 A0
+74 C1
+12 addr16(___fsmul;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+8A 82
+8B 83
+8C F0
+ED
+02 addr16(___fs2sint;)  
+90 00 00
+22
+AA 82
+AB 83
+AC F0
+FD
+EA
+4B
+4C
+8D F0
+C2 F7
+45 F0
+60 rel2(L021002?;)
+75 82 00
+22
+75 82 01
+22
+AA 82
+AB 83
+AC F0
+E5 data8(_Generate_Motor_Command_PARM_2;)
+45 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+70 rel2(L022002?;)
+E5 data8(_Generate_Motor_Command_PARM_3;)
+45 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+70 rel2(L022002?;)
+8A 82
+8B 83
+8C F0
+E4
+12 addr16(__gptrput;)  
+A3
+E4
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+8D 82
+8E 83
+8F F0
+E4
+12 addr16(__gptrput;)  
+A3
+E4
+02 addr16(__gptrput;)  
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+33
+E4
+33
+FD
+60 rel2(L022064?;)
+02 addr16(L022042?;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_2;)
+E4
+64 80
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) F0
+63 F0 80
+95 F0
+40 rel2(L022065?;)
+02 addr16(L022017?;)  
+C3
+E5 data8(_Generate_Motor_Command_PARM_2;)
+95 data8(_Generate_Motor_Command_PARM_3;)
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+64 80
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) F0
+63 F0 80
+95 F0
+50 rel2(L022008?;)
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+F5 data8(_Generate_Motor_Command_sloc0_1_0;)
+E4
+3B
+F5 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;)
+8C data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_2;) 82
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) 83
+12 addr16(__divsint;)  
+A9 82
+AE 83
+E5 data8(_Generate_Motor_Command_PARM_3;)
+C3
+99
+F9
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+9E
+FE
+85 data8(_Generate_Motor_Command_sloc0_1_0;) 82
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;) 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;) F0
+E9
+12 addr16(__gptrput;)  
+A3
+EE
+02 addr16(__gptrput;)  
+E5 data8(_Generate_Motor_Command_PARM_3;)
+B5 data8(_Generate_Motor_Command_PARM_2;) rel3(L022005?;)
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+B5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) rel3(L022005?;)
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+F5 data8(_Generate_Motor_Command_sloc0_1_0;)
+E4
+3B
+F5 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;)
+8C data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+12 addr16(__divsint;)  
+A9 82
+AE 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;) 82
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;) 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;) F0
+E9
+12 addr16(__gptrput;)  
+A3
+EE
+02 addr16(__gptrput;)  
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_2;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+F5 data8(_Generate_Motor_Command_sloc0_1_0;)
+E4
+3B
+F5 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;)
+8C data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+12 addr16(__divsint;)  
+A9 82
+AE 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;) 82
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;) 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;) F0
+E9
+12 addr16(__gptrput;)  
+A3
+EE
+02 addr16(__gptrput;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_2;)
+F5 data8(_Generate_Motor_Command_PARM_2;)
+E4
+95 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+F5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+C3
+E5 data8(_Generate_Motor_Command_PARM_2;)
+95 data8(_Generate_Motor_Command_PARM_3;)
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+64 80
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) F0
+63 F0 80
+95 F0
+50 rel2(L022014?;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_2;) 82
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AE 82
+AF 83
+D0 04
+D0 03
+D0 02
+E5 data8(_Generate_Motor_Command_PARM_3;)
+C3
+9E
+FE
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+9F
+FF
+8A 82
+8B 83
+8C F0
+EE
+12 addr16(__gptrput;)  
+A3
+EF
+12 addr16(__gptrput;)  
+74 02
+2A
+FE
+E4
+3B
+FF
+8C 00
+8E 82
+8F 83
+88 F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+02 addr16(__gptrput;)  
+E5 data8(_Generate_Motor_Command_PARM_3;)
+B5 data8(_Generate_Motor_Command_PARM_2;) rel3(L022011?;)
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+B5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) rel3(L022011?;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AE 82
+AF 83
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+EE
+12 addr16(__gptrput;)  
+A3
+EF
+12 addr16(__gptrput;)  
+74 02
+2A
+FE
+E4
+3B
+FF
+8C 00
+8E 82
+8F 83
+88 F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+02 addr16(__gptrput;)  
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AE 82
+AF 83
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+EE
+12 addr16(__gptrput;)  
+A3
+EF
+12 addr16(__gptrput;)  
+74 02
+2A
+FE
+E4
+3B
+FF
+8C 00
+8E 82
+8F 83
+88 F0
+E5 data8(_Generate_Motor_Command_PARM_2;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+02 addr16(__gptrput;)  
+ED
+70 rel2(L022072?;)
+02 addr16(L022038?;)  
+C3
+E5 data8(_Generate_Motor_Command_PARM_3;)
+94 F8
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+64 80
+94 7F
+50 rel2(L022073?;)
+02 addr16(L022038?;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_2;)
+E4
+64 80
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) F0
+63 F0 80
+95 F0
+50 rel2(L022020?;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+A3
+A3
+A3
+A3
+85 data8(_Generate_Motor_Command_PARM_2;) data8(__mulint_PARM_2;)
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) data8(__mulint_PARM_2;0x0001;+;)
+C0 02
+C0 03
+C0 04
+12 addr16(__mulint;)  
+AD 82
+AE 83
+75 data8(__divsint_PARM_2;) 04
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+8D 82
+8E 83
+12 addr16(__divsint;)  
+AD 82
+AE 83
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+8D 82
+8E 83
+8F F0
+E4
+12 addr16(__gptrput;)  
+A3
+E4
+02 addr16(__gptrput;)  
+8A 82
+8B 83
+8C F0
+E4
+12 addr16(__gptrput;)  
+A3
+E4
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+74 04
+25 data8(_Generate_Motor_Command_PARM_3;)
+F8
+E4
+35 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+F9
+85 data8(_Generate_Motor_Command_PARM_2;) 82
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) 83
+C0 05
+C0 06
+C0 07
+C0 00
+C0 01
+12 addr16(_abs;)  
+85 82 data8(__mulint_PARM_2;)
+85 83 data8(__mulint_PARM_2;0x0001;+;)
+D0 01
+D0 00
+88 82
+89 83
+12 addr16(__mulint;)  
+A8 82
+A9 83
+75 data8(__divsint_PARM_2;) 04
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+88 82
+89 83
+12 addr16(__divsint;)  
+A8 82
+A9 83
+D0 07
+D0 06
+D0 05
+8D 82
+8E 83
+8F F0
+E8
+12 addr16(__gptrput;)  
+A3
+E9
+02 addr16(__gptrput;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_2;)
+E4
+64 80
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) F0
+63 F0 80
+95 F0
+40 rel2(L022075?;)
+02 addr16(L022035?;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_3;)
+FD
+E4
+95 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+FE
+C3
+E5 data8(_Generate_Motor_Command_PARM_2;)
+9D
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+64 80
+8E F0
+63 F0 80
+95 F0
+50 rel2(L022026?;)
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+F5 data8(_Generate_Motor_Command_sloc0_1_0;)
+E4
+3B
+F5 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;)
+8C data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_2;) 82
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) 83
+12 addr16(__divsint;)  
+AF 82
+A8 83
+EF
+25 data8(_Generate_Motor_Command_PARM_3;)
+FF
+E8
+35 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+F8
+85 data8(_Generate_Motor_Command_sloc0_1_0;) 82
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0001;+;) 83
+85 data8(_Generate_Motor_Command_sloc0_1_0;0x0002;+;) F0
+EF
+12 addr16(__gptrput;)  
+A3
+E8
+02 addr16(__gptrput;)  
+ED
+B5 data8(_Generate_Motor_Command_PARM_2;) rel3(L022023?;)
+EE
+B5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) rel3(L022023?;)
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 05
+C0 06
+C0 07
+12 addr16(__divsint;)  
+A8 82
+A9 83
+D0 07
+D0 06
+D0 05
+8D 82
+8E 83
+8F F0
+E8
+12 addr16(__gptrput;)  
+A3
+E9
+02 addr16(__gptrput;)  
+C3
+E4
+95 data8(_Generate_Motor_Command_PARM_2;)
+FD
+E4
+95 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+FE
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 05
+C0 06
+C0 07
+12 addr16(__divsint;)  
+A8 82
+A9 83
+D0 07
+D0 06
+D0 05
+8D 82
+8E 83
+8F F0
+E8
+12 addr16(__gptrput;)  
+A3
+E9
+02 addr16(__gptrput;)  
+C3
+E5 data8(_Generate_Motor_Command_PARM_3;)
+95 data8(_Generate_Motor_Command_PARM_2;)
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+64 80
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) F0
+63 F0 80
+95 F0
+50 rel2(L022032?;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_2;) 82
+85 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AD 82
+AE 83
+D0 04
+D0 03
+D0 02
+E5 data8(_Generate_Motor_Command_PARM_3;)
+C3
+9D
+FD
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+9E
+FE
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+8D 82
+8E 83
+8F F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+02 addr16(__gptrput;)  
+E5 data8(_Generate_Motor_Command_PARM_3;)
+B5 data8(_Generate_Motor_Command_PARM_2;) rel3(L022029?;)
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+B5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;) rel3(L022029?;)
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AD 82
+AE 83
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+2A
+FD
+E4
+3B
+FE
+8C 07
+8D 82
+8E 83
+8F F0
+E5 data8(_Generate_Motor_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+02 addr16(__gptrput;)  
+75 data8(__divsint_PARM_2;) 02
+E4
+F5 data8(__divsint_PARM_2;0x0001;+;)
+85 data8(_Generate_Motor_Command_PARM_3;) 82
+85 data8(_Generate_Motor_Command_PARM_3;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+12 addr16(__divsint;)  
+AD 82
+AE 83
+D0 04
+D0 03
+D0 02
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+2A
+FA
+E4
+3B
+FB
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Motor_Command_PARM_2;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+02 addr16(__gptrput;)  
+AA 82
+AB 83
+AC F0
+E5 data8(_Generate_Pivot_Command_PARM_2;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Pivot_Command_PARM_2;0x0001;+;)
+12 addr16(__gptrput;)  
+74 02
+2A
+FA
+E4
+3B
+FB
+8A 82
+8B 83
+8C F0
+E5 data8(_Generate_Pivot_Command_PARM_3;)
+12 addr16(__gptrput;)  
+A3
+E5 data8(_Generate_Pivot_Command_PARM_3;0x0001;+;)
+02 addr16(__gptrput;)  
+85 82 data8(_Weigh_Dual_Inputs_mout_1_144;)
+85 83 data8(_Weigh_Dual_Inputs_mout_1_144;0x0001;+;)
+85 F0 data8(_Weigh_Dual_Inputs_mout_1_144;0x0002;+;)
+85 data8(_Weigh_Dual_Inputs_PARM_2;) data8(_Weigh_Dual_Inputs_sloc1_1_0;)
+85 data8(_Weigh_Dual_Inputs_PARM_2;0x0001;+;) data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0001;+;)
+85 data8(_Weigh_Dual_Inputs_PARM_2;0x0002;+;) data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0002;+;)
+85 data8(_Weigh_Dual_Inputs_sloc1_1_0;) 82
+85 data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0001;+;) 83
+85 data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0002;+;) F0
+12 addr16(__gptrget;)  
+F5 data8(_Weigh_Dual_Inputs_sloc0_1_0;)
+A3
+12 addr16(__gptrget;)  
+F5 data8(_Weigh_Dual_Inputs_sloc0_1_0;0x0001;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0001;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0002;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0003;+;)
+90 00 00
+75 F0 80
+74 3F
+12 addr16(___fssub;)  
+AA 82
+AB 83
+AC F0
+F8
+E5 81
+24 FC
+F5 81
+85 data8(_Weigh_Dual_Inputs_sloc0_1_0;) 82
+85 data8(_Weigh_Dual_Inputs_sloc0_1_0;0x0001;+;) 83
+C0 02
+C0 03
+C0 04
+C0 00
+12 addr16(___sint2fs;)  
+A9 82
+AD 83
+AE F0
+FF
+D0 00
+D0 04
+D0 03
+D0 02
+C0 02
+C0 03
+C0 04
+C0 00
+C0 02
+C0 03
+C0 04
+C0 00
+89 82
+8D 83
+8E F0
+EF
+12 addr16(___fsmul;)  
+85 82 data8(_Weigh_Dual_Inputs_sloc2_1_0;)
+85 83 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0001;+;)
+85 F0 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0002;+;)
+F5 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0003;+;)
+E5 81
+24 FC
+F5 81
+85 data8(_Weigh_Dual_Inputs_PARM_3;) data8(_Weigh_Dual_Inputs_sloc3_1_0;)
+85 data8(_Weigh_Dual_Inputs_PARM_3;0x0001;+;) data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0001;+;)
+85 data8(_Weigh_Dual_Inputs_PARM_3;0x0002;+;) data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0002;+;)
+85 data8(_Weigh_Dual_Inputs_sloc3_1_0;) 82
+85 data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0001;+;) 83
+85 data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0002;+;) F0
+12 addr16(__gptrget;)  
+F9
+A3
+12 addr16(__gptrget;)  
+FD
+89 82
+8D 83
+12 addr16(___sint2fs;)  
+AD 82
+AE 83
+AF F0
+F9
+C0 data8(_Weigh_Dual_Inputs_PARM_4;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0001;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0002;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0003;+;)
+8D 82
+8E 83
+8F F0
+E9
+12 addr16(___fsmul;)  
+AD 82
+AE 83
+AF F0
+F9
+E5 81
+24 FC
+F5 81
+C0 05
+C0 06
+C0 07
+C0 01
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;) 82
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0001;+;) 83
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0002;+;) F0
+E5 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0003;+;)
+12 addr16(___fsadd;)  
+AD 82
+AE 83
+AF F0
+F9
+E5 81
+24 FC
+F5 81
+8D 82
+8E 83
+8F F0
+E9
+12 addr16(___fs2sint;)  
+AD 82
+AE 83
+85 data8(_Weigh_Dual_Inputs_mout_1_144;) 82
+85 data8(_Weigh_Dual_Inputs_mout_1_144;0x0001;+;) 83
+85 data8(_Weigh_Dual_Inputs_mout_1_144;0x0002;+;) F0
+ED
+12 addr16(__gptrput;)  
+A3
+EE
+12 addr16(__gptrput;)  
+74 02
+25 data8(_Weigh_Dual_Inputs_mout_1_144;)
+F5 data8(_Weigh_Dual_Inputs_sloc2_1_0;)
+E4
+35 data8(_Weigh_Dual_Inputs_mout_1_144;0x0001;+;)
+F5 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0001;+;)
+85 data8(_Weigh_Dual_Inputs_mout_1_144;0x0002;+;) data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0002;+;)
+74 02
+25 data8(_Weigh_Dual_Inputs_sloc1_1_0;)
+F9
+E4
+35 data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0001;+;)
+FD
+AE data8(_Weigh_Dual_Inputs_sloc1_1_0;0x0002;+;)
+89 82
+8D 83
+8E F0
+12 addr16(__gptrget;)  
+F9
+A3
+12 addr16(__gptrget;)  
+FD
+89 82
+8D 83
+12 addr16(___sint2fs;)  
+12 addr16(___fsmul;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+74 02
+25 data8(_Weigh_Dual_Inputs_sloc3_1_0;)
+FE
+E4
+35 data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0001;+;)
+FF
+A8 data8(_Weigh_Dual_Inputs_sloc3_1_0;0x0002;+;)
+8E 82
+8F 83
+88 F0
+12 addr16(__gptrget;)  
+FE
+A3
+12 addr16(__gptrget;)  
+FF
+8E 82
+8F 83
+C0 02
+C0 03
+C0 04
+C0 05
+12 addr16(___sint2fs;)  
+AE 82
+AF 83
+A8 F0
+F9
+C0 data8(_Weigh_Dual_Inputs_PARM_4;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0001;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0002;+;)
+C0 data8(_Weigh_Dual_Inputs_PARM_4;0x0003;+;)
+8E 82
+8F 83
+88 F0
+E9
+12 addr16(___fsmul;)  
+AE 82
+AF 83
+A8 F0
+F9
+E5 81
+24 FC
+F5 81
+D0 05
+D0 04
+D0 03
+D0 02
+C0 06
+C0 07
+C0 00
+C0 01
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(___fsadd;)  
+AA 82
+AB 83
+AC F0
+FD
+E5 81
+24 FC
+F5 81
+8A 82
+8B 83
+8C F0
+ED
+12 addr16(___fs2sint;)  
+AA 82
+AB 83
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;) 82
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0001;+;) 83
+85 data8(_Weigh_Dual_Inputs_sloc2_1_0;0x0002;+;) F0
+EA
+12 addr16(__gptrput;)  
+A3
+EB
+02 addr16(__gptrput;)  
+75 82 13
+12 addr16(_Volts_at_Pin;)  
+AA 82
+AB 83
+AC F0
+FD
+75 82 0E
+C0 02
+C0 03
+C0 04
+C0 05
+12 addr16(_Volts_at_Pin;)  
+AE 82
+AF 83
+A8 F0
+F9
+D0 05
+D0 04
+D0 03
+D0 02
+EA
+4B
+4C
+8D F0
+C2 F7
+45 F0
+60 rel2(L025001?;)
+EE
+4F
+48
+89 F0
+C2 F7
+45 F0
+70 rel2(L025002?;)
+90 07 D0
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+C0 07
+C0 00
+C0 01
+12 addr16(_waitms;)  
+D0 01
+D0 00
+D0 07
+D0 06
+D0 05
+D0 04
+D0 03
+D0 02
+EA
+4B
+4C
+8D F0
+C2 F7
+45 F0
+60 rel2(L025005?;)
+EE
+4F
+48
+89 F0
+C2 F7
+45 F0
+60 rel2(L025025?;)
+02 addr16(L025012?;)  
+75 82 13
+12 addr16(_Volts_at_Pin;)  
+AA 82
+AB 83
+AC F0
+FD
+EA
+4B
+4C
+8D F0
+C2 F7
+45 F0
+60 rel2(L025005?;)
+75 82 0E
+12 addr16(_Volts_at_Pin;)  
+AA 82
+AB 83
+AC F0
+FD
+EA
+4B
+4C
+8D F0
+C2 F7
+45 F0
+60 rel2(L025005?;)
+22
+D2 A0
+75 82 28
+12 addr16(_Timer3us;)  
+C2 A0
+22
+AA 82
+8A E0
+A2 E7
+92 90
+A2 E6
+92 91
+A2 E5
+92 92
+A2 E4
+92 93
+C0 02
+12 addr16(_LCD_pulse;)  
+75 82 28
+12 addr16(_Timer3us;)  
+D0 02
+8A E0
+A2 E3
+92 90
+A2 E2
+92 91
+A2 E1
+92 92
+A2 E0
+92 93
+02 addr16(_LCD_pulse;)  
+AA 82
+D2 97
+8A 82
+12 addr16(_LCD_byte;)  
+90 00 02
+02 addr16(_waitms;)  
+AA 82
+C2 97
+8A 82
+12 addr16(_LCD_byte;)  
+90 00 05
+02 addr16(_waitms;)  
+C2 A0
+90 00 14
+12 addr16(_waitms;)  
+75 82 33
+12 addr16(_WriteCommand;)  
+75 82 33
+12 addr16(_WriteCommand;)  
+75 82 32
+12 addr16(_WriteCommand;)  
+75 82 28
+12 addr16(_WriteCommand;)  
+75 82 0C
+12 addr16(_WriteCommand;)  
+75 82 01
+12 addr16(_WriteCommand;)  
+90 00 14
+02 addr16(_waitms;)  
+AA 82
+AB 83
+AC F0
+74 02
+B5 data8(_LCDprint_PARM_2;) rel3(L031013?;)
+7D C0
+80 rel2(L031014?;)
+7D 80
+8D 82
+C0 02
+C0 03
+C0 04
+12 addr16(_WriteCommand;)  
+90 00 05
+12 addr16(_waitms;)  
+D0 04
+D0 03
+D0 02
+7D 00
+7E 00
+ED
+2A
+FF
+EE
+3B
+F8
+8C 01
+8F 82
+88 83
+89 F0
+12 addr16(__gptrget;)  
+FF
+60 rel2(L031006?;)
+8F 82
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+12 addr16(_WriteData;)  
+D0 06
+D0 05
+D0 04
+D0 03
+D0 02
+0D
+BD 00 rel3(L031003?;)
+0E
+80 rel2(L031003?;)
+30 bit(_LCDprint_PARM_3;) rel3(L031011?;)
+8D 02
+8E 03
+C3
+EA
+94 10
+EB
+64 80
+94 80
+50 rel2(L031011?;)
+75 82 20
+C0 02
+C0 03
+12 addr16(_WriteData;)  
+D0 03
+D0 02
+0A
+BA 00 rel3(L031007?;)
+0B
+80 rel2(L031007?;)
+22
+85 82 data8(_getsn_buff_1_162;)
+85 83 data8(_getsn_buff_1_162;0x0001;+;)
+85 F0 data8(_getsn_buff_1_162;0x0002;+;)
+E4
+F5 data8(_getsn_sloc0_1_0;)
+F5 data8(_getsn_sloc0_1_0;0x0001;+;)
+E5 data8(_getsn_PARM_2;)
+24 FF
+FF
+E5 data8(_getsn_PARM_2;0x0001;+;)
+34 FF
+F8
+79 00
+7A 00
+C3
+E9
+9F
+EA
+64 80
+88 F0
+63 F0 80
+95 F0
+50 rel2(L032008?;)
+C0 02
+C0 07
+C0 00
+C0 01
+12 addr16(_getchar;)  
+AB 82
+D0 01
+D0 00
+D0 07
+D0 02
+BB 0A rel3(L032015?;)
+80 rel2(L032001?;)
+BB 0D rel3(L032002?;)
+E5 data8(_getsn_sloc0_1_0;)
+25 data8(_getsn_buff_1_162;)
+FC
+E5 data8(_getsn_sloc0_1_0;0x0001;+;)
+35 data8(_getsn_buff_1_162;0x0001;+;)
+FD
+AE data8(_getsn_buff_1_162;0x0002;+;)
+8C 82
+8D 83
+8E F0
+E4
+12 addr16(__gptrput;)  
+85 data8(_getsn_sloc0_1_0;) 82
+85 data8(_getsn_sloc0_1_0;0x0001;+;) 83
+22
+E9
+25 data8(_getsn_buff_1_162;)
+FC
+EA
+35 data8(_getsn_buff_1_162;0x0001;+;)
+FD
+AE data8(_getsn_buff_1_162;0x0002;+;)
+8C 82
+8D 83
+8E F0
+EB
+12 addr16(__gptrput;)  
+09
+B9 00 rel3(L032018?;)
+0A
+89 data8(_getsn_sloc0_1_0;)
+8A data8(_getsn_sloc0_1_0;0x0001;+;)
+80 rel2(L032005?;)
+E5 data8(_getsn_sloc0_1_0;)
+25 data8(_getsn_buff_1_162;)
+FA
+E5 data8(_getsn_sloc0_1_0;0x0001;+;)
+35 data8(_getsn_buff_1_162;0x0001;+;)
+FB
+AC data8(_getsn_buff_1_162;0x0002;+;)
+8A 82
+8B 83
+8C F0
+E4
+12 addr16(__gptrput;)  
+85 data8(_getsn_PARM_2;) 82
+85 data8(_getsn_PARM_2;0x0001;+;) 83
+22
+AA 82
+7B 07
+7C 00
+EC
+20 E7 rel3(L033004?;)
+8B F0
+05 F0
+EA
+33
+92 D2
+EA
+80 rel2(L033012?;)
+A2 D2
+13
+D5 F0 rel3(L033011?;)
+54 01
+FD
+33
+95 E0
+FE
+C0 02
+C0 03
+C0 04
+C0 05
+C0 06
+74 data8(__str_3;)
+C0 E0
+74 data8(__str_3;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+E5 81
+24 FB
+F5 81
+D0 04
+D0 03
+D0 02
+1B
+BB FF rel3(L033013?;)
+1C
+80 rel2(L033001?;)
+74 data8(__str_4;)
+C0 E0
+74 data8(__str_4;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+15 81
+15 81
+15 81
+22
+90 01 F4
+12 addr16(_waitms;)  
+90 25 80
+E4
+F5 F0
+12 addr16(_UART1_Init;)  
+75 data8(_InitPinADC_PARM_2;) 01
+75 82 02
+12 addr16(_InitPinADC;)  
+75 data8(_InitPinADC_PARM_2;) 02
+75 82 02
+12 addr16(_InitPinADC;)  
+75 data8(_InitPinADC_PARM_2;) 03
+75 82 02
+12 addr16(_InitPinADC;)  
+75 data8(_InitPinADC_PARM_2;) 04
+75 82 02
+12 addr16(_InitPinADC;)  
+75 data8(_InitPinADC_PARM_2;) 05
+75 82 02
+12 addr16(_InitPinADC;)  
+75 data8(_InitPinADC_PARM_2;) 06
+75 82 02
+12 addr16(_InitPinADC;)  
+12 addr16(_InitADC;)  
+12 addr16(_LCD_4BIT;)  
+74 data8(__str_5;)
+C0 E0
+74 data8(__str_5;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+15 81
+15 81
+15 81
+12 addr16(_Wait_For_Calibration;)  
+90 00 C8
+12 addr16(_waitms;)  
+90 data16(__str_6;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_6;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_7;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_8;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_9;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_10;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_11;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+90 data16(__str_12;)  
+75 F0 80
+12 addr16(_SendATCommand;)  
+74 data8(__str_13;)
+C0 E0
+74 data8(__str_13;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+12 addr16(_printf;)  
+15 81
+15 81
+15 81
+75 82 13
+12 addr16(_Volts_at_Pin;)  
+85 82 data8(_main_sw_left_1_171;)
+85 83 data8(_main_sw_left_1_171;0x0001;+;)
+85 F0 data8(_main_sw_left_1_171;0x0002;+;)
+F5 data8(_main_sw_left_1_171;0x0003;+;)
+75 82 12
+12 addr16(_Volts_at_Pin;)  
+85 82 data8(_main_vx_left_1_171;)
+85 83 data8(_main_vx_left_1_171;0x0001;+;)
+85 F0 data8(_main_vx_left_1_171;0x0002;+;)
+F5 data8(_main_vx_left_1_171;0x0003;+;)
+75 82 11
+12 addr16(_Volts_at_Pin;)  
+85 82 data8(_main_vy_left_1_171;)
+85 83 data8(_main_vy_left_1_171;0x0001;+;)
+85 F0 data8(_main_vy_left_1_171;0x0002;+;)
+F5 data8(_main_vy_left_1_171;0x0003;+;)
+75 82 0E
+12 addr16(_Volts_at_Pin;)  
+85 82 data8(_main_sw_right_1_171;)
+85 83 data8(_main_sw_right_1_171;0x0001;+;)
+85 F0 data8(_main_sw_right_1_171;0x0002;+;)
+F5 data8(_main_sw_right_1_171;0x0003;+;)
+75 82 0F
+12 addr16(_Volts_at_Pin;)  
+85 82 data8(_main_vx_right_1_171;)
+85 83 data8(_main_vx_right_1_171;0x0001;+;)
+85 F0 data8(_main_vx_right_1_171;0x0002;+;)
+F5 data8(_main_vx_right_1_171;0x0003;+;)
+75 82 10
+12 addr16(_Volts_at_Pin;)  
+AE 82
+AF 83
+AA F0
+FB
+85 data8(_main_vx_left_1_171;) 82
+85 data8(_main_vx_left_1_171;0x0001;+;) 83
+85 data8(_main_vx_left_1_171;0x0002;+;) F0
+E5 data8(_main_vx_left_1_171;0x0003;+;)
+C0 02
+C0 03
+C0 06
+C0 07
+12 addr16(_Voltage_to_Coordinate;)  
+85 82 data8(_main_vx1_1_171;)
+85 83 data8(_main_vx1_1_171;0x0001;+;)
+85 data8(_main_vy_left_1_171;) 82
+85 data8(_main_vy_left_1_171;0x0001;+;) 83
+85 data8(_main_vy_left_1_171;0x0002;+;) F0
+E5 data8(_main_vy_left_1_171;0x0003;+;)
+12 addr16(_Voltage_to_Coordinate;)  
+85 82 data8(_main_vy1_1_171;)
+85 83 data8(_main_vy1_1_171;0x0001;+;)
+85 data8(_main_vx_right_1_171;) 82
+85 data8(_main_vx_right_1_171;0x0001;+;) 83
+85 data8(_main_vx_right_1_171;0x0002;+;) F0
+E5 data8(_main_vx_right_1_171;0x0003;+;)
+12 addr16(_Voltage_to_Coordinate;)  
+AC 82
+AD 83
+D0 07
+D0 06
+D0 03
+D0 02
+8E 82
+8F 83
+8A F0
+EB
+C0 04
+C0 05
+12 addr16(_Voltage_to_Coordinate;)  
+AA 82
+AB 83
+D0 05
+D0 04
+85 data8(_main_sw_left_1_171;) 82
+85 data8(_main_sw_left_1_171;0x0001;+;) 83
+85 data8(_main_sw_left_1_171;0x0002;+;) F0
+E5 data8(_main_sw_left_1_171;0x0003;+;)
+C0 02
+C0 03
+C0 04
+C0 05
+12 addr16(_Check_Joystick_Button;)  
+85 data8(_main_sw_right_1_171;) 82
+85 data8(_main_sw_right_1_171;0x0001;+;) 83
+85 data8(_main_sw_right_1_171;0x0002;+;) F0
+E5 data8(_main_sw_right_1_171;0x0003;+;)
+12 addr16(_Check_Joystick_Button;)  
+85 data8(_main_vx1_1_171;) data8(_Generate_Motor_Command_PARM_2;)
+85 data8(_main_vx1_1_171;0x0001;+;) data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+85 data8(_main_vy1_1_171;) data8(_Generate_Motor_Command_PARM_3;)
+85 data8(_main_vy1_1_171;0x0001;+;) data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+90 data16(_mcmd1;)  
+75 F0 40
+12 addr16(_Generate_Motor_Command;)  
+D0 05
+D0 04
+D0 03
+D0 02
+8C data8(_Generate_Motor_Command_PARM_2;)
+8D data8(_Generate_Motor_Command_PARM_2;0x0001;+;)
+8A data8(_Generate_Motor_Command_PARM_3;)
+8B data8(_Generate_Motor_Command_PARM_3;0x0001;+;)
+90 data16(_mcmd2;)  
+75 F0 40
+12 addr16(_Generate_Motor_Command;)  
+75 data8(_Weigh_Dual_Inputs_PARM_2;) data8(_mcmd1;)
+75 data8(_Weigh_Dual_Inputs_PARM_2;0x0001;+;) 00
+75 data8(_Weigh_Dual_Inputs_PARM_2;0x0002;+;) 40
+75 data8(_Weigh_Dual_Inputs_PARM_3;) data8(_mcmd2;)
+75 data8(_Weigh_Dual_Inputs_PARM_3;0x0001;+;) 00
+75 data8(_Weigh_Dual_Inputs_PARM_3;0x0002;+;) 40
+75 data8(_Weigh_Dual_Inputs_PARM_4;) CD
+75 data8(_Weigh_Dual_Inputs_PARM_4;0x0001;+;) CC
+75 data8(_Weigh_Dual_Inputs_PARM_4;0x0002;+;) 4C
+75 data8(_Weigh_Dual_Inputs_PARM_4;0x0003;+;) 3E
+90 data16(_mcmd;)  
+75 F0 40
+12 addr16(_Weigh_Dual_Inputs;)  
+78 data8(_mcmd;0x0002;+;)
+86 02
+08
+86 03
+78 data8(_mcmd;)
+86 04
+08
+86 05
+C0 02
+C0 03
+C0 04
+C0 05
+74 data8(__str_14;)
+C0 E0
+74 data8(__str_14;0x0008;>>;)
+C0 E0
+74 80
+C0 E0
+74 data8(_tbuff;)
+C0 E0
+74 data8(_tbuff;0x0008;>>;)
+C0 E0
+74 40
+C0 E0
+12 addr16(_sprintf;)  
+E5 81
+24 F6
+F5 81
+74 data8(_tbuff;)
+C0 E0
+74 data8(_tbuff;0x0008;>>;)
+C0 E0
+74 40
+C0 E0
+12 addr16(_printf;)  
+15 81
+15 81
+15 81
+74 0D
+C0 E0
+E4
+C0 E0
+C0 E0
+12 addr16(_printf;)  
+15 81
+15 81
+15 81
+90 data16(_tbuff;)  
+75 F0 40
+12 addr16(_sendstr1;)  
+7A 00
+7B 00
+C0 02
+C0 03
+12 addr16(_RXU1;)  
+D0 03
+D0 02
+40 rel2(L034007?;)
+75 82 64
+C0 02
+C0 03
+12 addr16(_Timer3us;)  
+D0 03
+D0 02
+0A
+BA 00 rel3(L034021?;)
+0B
+C3
+74 E8
+9A
+74 83
+8B F0
+63 F0 80
+95 F0
+50 rel2(L034006?;)
+12 addr16(_RXU1;)  
+40 rel2(L034023?;)
+02 addr16(L034011?;)  
+90 data16(_rbuff;)  
+75 F0 40
+12 addr16(_getstr1;)  
+02 addr16(L034011?;)  
+</CODE>
+
+<CODE R_CSEG>
+</CODE>
+
+<CODE R_XINIT>
+</CODE>
+
+<CODE R_CONST>
+49 6E 69 74 69 61 6C 69 7A 65 64 20 41 44 43 20 61
+74 20 50 69 6E 20 25 64 5F 25 64 
+0A
+00
+43 6F 6D 6D 61 6E 64 3A 20 25 73 
+00
+52 65 73 70 6F 6E 73 65 3A 20 25 73 
+0D
+0A
+00
+25 64 
+00
+0A
+00
+0A
+0A
+2D 2D 2D 2D 20 50 72 65 73 73 20 61 6E 64 20 48 6F
+6C 64 20 62 6F 74 68 20 4A 6F 79 73 74 69 63 6B
+73 20 74 6F 20 43 61 6C 69 62 72 61 74 65 20 2D
+2D 2D 2D 
+0A
+00
+41 54 2B 42 41 55 44 
+0D
+0A
+00
+41 54 2B 52 46 49 44 
+0D
+0A
+00
+41 54 2B 44 56 49 44 41 30 43 34 
+0D
+0A
+00
+41 54 2B 52 46 43 
+0D
+0A
+00
+41 54 2B 50 4F 57 45 
+0D
+0A
+00
+41 54 2B 43 4C 53 53 
+0D
+0A
+00
+41 54 2B 56 45 52 
+0D
+0A
+00
+0A
+0A
+2D 2D 2D 2D 20 43 4F 4E 54 52 4F 4C 4C 45 52 20 53
+45 54 55 50 20 43 4F 4D 50 4C 45 54 45 20 2D 2D
+2D 2D 
+0A
+00
+25 33 64 2C 25 33 64 20 43 20 54 
+0A
+00
+</CODE>
+
+<CODE AT 0003>
+</CODE>
