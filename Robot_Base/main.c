@@ -292,7 +292,7 @@ int main(void)
     int j, vl, vr;
 	long int count;
 	float T, f;
-	int light_check = 1;
+	int light_check = 0;
 
 	Hardware_Init();
 	initUART2(9600);
