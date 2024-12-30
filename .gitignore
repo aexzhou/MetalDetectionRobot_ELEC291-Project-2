@@ -1,0 +1,9 @@
+*.lkr
+*.lst
+*.map
+*.obj
+*.asm
+*.hex
+*.o
+*.bat
+*.mac
